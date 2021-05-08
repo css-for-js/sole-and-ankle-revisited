@@ -26,7 +26,7 @@ We'll use a **desktop-first** approach for this process, and our breakpoints wil
 
 Before we start tweaking the UI, let's add some structure to make it easy for us to use media queries.
 
-It's up to you how you'd like to structure it! You can use the strategy discussed in [the “breakpoints” lesson](https://courses.joshwcomeau.com/css-for-js/05-responsive-css/06-breakpoints#managing-breakpoints), or you can use [styled-components' “theming” feature](https://styled-components.com/docs/advanced#theming).
+It's up to you how you'd like to structure it! You can use the strategy discussed in [the “breakpoints” lesson](https://courses.joshwcomeau.com/css-for-js/05-responsive-css/07-breakpoints#managing-breakpoints), or you can use [styled-components' “theming” feature](https://styled-components.com/docs/advanced#theming).
 
 Whichever approach you choose, your breakpoints should be specified in rems (not pixels).
 

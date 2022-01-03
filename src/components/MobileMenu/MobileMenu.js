@@ -105,7 +105,7 @@ const Foot = styled.div`
   padding-bottom: 10px;
 
   & > a {
-    color: ${COLORS.gray};
+    color: var(--color-gray-700);
     text-decoration: none;
   }
 `

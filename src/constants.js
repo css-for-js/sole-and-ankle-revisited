@@ -19,7 +19,7 @@ export const WEIGHTS = {
 
 const BREAKPOINTS = {
   phone: 37.5,
-  tablet: 40,//59.375,
+  tablet: 59.375,
   laptop: 81.25,
 }
 export const QUERIES = {

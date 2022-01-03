@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { WEIGHTS } from '../../constants';
+import { WEIGHTS, QUERIES } from '../../constants';
 
 import Breadcrumbs from '../Breadcrumbs';
 import Select from '../Select';
@@ -47,10 +47,24 @@ const Wrapper = styled.div`
   flex-direction: row-reverse;
   align-items: baseline;
   gap: 32px;
+
+  @media ${QUERIES.tabletAndDown} {
+    flex-direction: column-reverse;
+  }
 `;
 
 const LeftColumn = styled.div`
   flex-basis: 248px;
+
+  
+  @media ${QUERIES.tabletAndDown} {
+    flex-basis: 0px;
+
+    & > *:not(:nth-child(1)) {
+      display: none;
+    }
+  }
+
 `;
 
 const MainColumn = styled.div`
@@ -61,6 +75,12 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
+  @media ${QUERIES.mobileAndDown} {
+    & > *:not(:nth-child(1)) {
+      display: none;
+    }
+  }
 `;
 
 const Title = styled.h2`

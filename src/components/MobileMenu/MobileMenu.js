@@ -3,8 +3,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
 
-import { QUERIES } from '../../constants';
-import { COLORS, WEIGHTS } from '../../constants';
+import { WEIGHTS } from '../../constants';
 
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
@@ -41,7 +40,7 @@ const Overlay = styled(DialogOverlay)`
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(96, 100, 108, 0.8);
+  background: hsl(220, 5%, 40%, 0.8);
 `;
 
 const Content = styled(DialogContent)`
@@ -53,7 +52,7 @@ const Content = styled(DialogContent)`
   width: 75%;
   padding: 26px 16px 32px 32px;
   height: 100vh;
-  background-color: ${COLORS.white};
+  background-color: var(--color-white);
 `;
 
 const DismissIconButton = styled(UnstyledButton)`
@@ -71,11 +70,11 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${COLORS.gray[900]};
+  color: var(--color-gray-900);
   font-weight: ${WEIGHTS.medium};
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `;
 
@@ -89,7 +88,7 @@ const FooterLink = styled.a`
   text-decoration: none;
   font-size: ${14 / 16}rem;
   font-weight: ${WEIGHTS.normal};
-  color: ${COLORS.gray[700]};
+  color: var(--color-gray-700);
 `;
 
 export default MobileMenu;

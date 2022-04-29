@@ -50,9 +50,10 @@ const Header = () => {
 const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
+  height: min(72px, 100%);
   padding: 18px 32px;
-  height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow: auto;
 
   @media ${(p) => p.theme.queries.mobileAndDown} {
     padding: 18px 16px;
@@ -61,7 +62,7 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(1.5rem, 1.8vw + 1rem, 3rem);
   margin: 0px 48px;
 
   @media ${(p) => p.theme.queries.tabletAndDown} {

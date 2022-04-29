@@ -11,10 +11,6 @@ import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
 
 const MobileMenu = ({ isOpen, onDismiss }) => {
-  // if (!isOpen) {
-  //   return null;
-  // }
-
   return (
     <Overlay isOpen={isOpen} onDismiss={onDismiss}>
       <Content>

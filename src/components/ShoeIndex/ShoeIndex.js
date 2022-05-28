@@ -74,8 +74,8 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: baseline;
 
-  @media ${QUERIES.tabletAndDown} {
-    .sort {
+  @media ${QUERIES.phoneAndDown} {
+    .sort-wrapper {
       display: none;
     }
   }

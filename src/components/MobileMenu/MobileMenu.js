@@ -58,7 +58,7 @@ const Overlay = styled(DialogOverlay)`
 
 const Content = styled(DialogContent)`
   height: 100%;
-  width: 75%;
+  width: 300px;
   margin-left: auto;
   background-color: ${COLORS.white};
   display: flex;
@@ -83,8 +83,9 @@ const NavLink = styled.a`
 
 const CloseButton = styled(UnstyledButton)`
   position: absolute;
-  top: 32px;
-  right: 22px;
+  top: 10px;
+  right: 0px;
+  padding: 16px;
 `
 
 const Footer = styled.footer`

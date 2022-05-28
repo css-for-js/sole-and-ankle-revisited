@@ -14,7 +14,7 @@ const Select = ({ label, value, children, ...delegated }) => {
   const displayedValue = selectedChild.props.children;
 
   return (
-    <Wrapper>
+    <Wrapper className='sort-wrapper'>
       <VisibleLabel>{label}</VisibleLabel>
 
       <SelectWrapper>
@@ -36,10 +36,6 @@ const Select = ({ label, value, children, ...delegated }) => {
 const Wrapper = styled.label`
   display: flex;
   align-items: baseline;
-
-  @media ${QUERIES.phoneAndDown} {
-    display: none;
-  }
 `;
 
 const VisibleLabel = styled.span`

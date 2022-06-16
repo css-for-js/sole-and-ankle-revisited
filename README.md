@@ -20,6 +20,12 @@ We'll use a **desktop-first** approach for this process, and our breakpoints wil
 | tablet | 950        | 59.375      |
 | laptop | 1300       | 81.25       |
 
+## Troubleshooting
+
+If you run into problems running a local development server, check out our [Troubleshooting Guide](https://courses.joshwcomeau.com/troubleshooting) on the course platform.
+
+This guide addresses the common `Digital Envelope Routine` error you may have seen.
+
 ---
 
 ## Exercise 1: Set up our breakpoints

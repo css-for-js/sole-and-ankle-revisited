@@ -23,7 +23,7 @@ const CrumbWrapper = styled.div`
     &::before {
       content: '/';
       margin-right: 8px;
-      color: ${COLORS.gray[300]};
+      color: var(--color-gray-300);
     }
   }
 `;

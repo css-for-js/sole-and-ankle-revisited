@@ -36,7 +36,9 @@ const Header = () => {
         <NavIcons>
           <Icon id="shopping-bag" strokeWidth={2} />
           <Icon id="search" strokeWidth={2} />
-          <Icon id="menu" strokeWidth={2} />
+          <MenuButtonWrapper onClick={() => setShowMobileMenu(true)}>
+            <Icon id="menu" strokeWidth={2} /> 
+          </MenuButtonWrapper>
         </NavIcons>
         <Side />
       </MainHeader>
@@ -91,6 +93,11 @@ const NavIcons = styled.nav`
     gap: 16px;
   }
 `;
+
+const MenuButtonWrapper = styled.button`
+  border: none; 
+  background-color: transparent;
+`
 
 const Side = styled.div`
   flex: 1;

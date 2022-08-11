@@ -3,9 +3,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
 
-import { QUERIES } from '../../constants';
-
-import { COLORS, WEIGHTS } from '../../constants';
+import { COLORS, WEIGHTS, QUERIES } from '../../constants';
 
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
@@ -17,52 +15,66 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
   }
 
   return (
-    <Menu>
-      <VisuallyHidden>
-        <button onClick={onDismiss}>Dismiss menu</button>
-      </VisuallyHidden>
-      <XiconWrapper>
-      <UnstyledButton onClick={onDismiss}>
-        <Icon id="close" strokeWidth={2} /> 
-      </UnstyledButton>
-      </XiconWrapper>
-      <MenuNav>
-        <NavLink href="/sale">Sale</NavLink>
-        <NavLink href="/new">New&nbsp;Releases</NavLink>
-        <NavLink href="/men">Men</NavLink>
-        <NavLink href="/women">Women</NavLink>
-        <NavLink href="/kids">Kids</NavLink>
-        <NavLink href="/collections">Collections</NavLink>
-      </MenuNav>
-      <MenuFooter>
-        <FooterLink href="/terms">Terms and Conditions</FooterLink>
-        <FooterLink href="/privacy">Privacy Policy</FooterLink>
-        <FooterLink href="/contact">Contact Us</FooterLink>
-      </MenuFooter>
-    </Menu>
+    <Overlay
+      isOpen={isOpen}
+      onDismiss={onDismiss}
+    >
+      <Menu>
+        <VisuallyHidden>
+          <button onClick={onDismiss}>Dismiss menu</button>
+        </VisuallyHidden>
+        <XiconWrapper>
+        <UnstyledButton onClick={onDismiss}>
+          <Icon id="close" strokeWidth={2} /> 
+        </UnstyledButton>
+        </XiconWrapper>
+        <MenuNav>
+          <NavLink href="/sale">Sale</NavLink>
+          <NavLink href="/new">New&nbsp;Releases</NavLink>
+          <NavLink href="/men">Men</NavLink>
+          <NavLink href="/women">Women</NavLink>
+          <NavLink href="/kids">Kids</NavLink>
+          <NavLink href="/collections">Collections</NavLink>
+        </MenuNav>
+        <MenuFooter>
+          <FooterLink href="/terms">Terms and Conditions</FooterLink>
+          <FooterLink href="/privacy">Privacy Policy</FooterLink>
+          <FooterLink href="/contact">Contact Us</FooterLink>
+        </MenuFooter>
+      </Menu>
+    </Overlay>
   );
 };
 
-const Menu = styled.div`
-  display: none;
+const Overlay = styled(DialogOverlay)`
+  position: fixed;
+  top: 0; 
+  right: 0; 
+  left: 0; 
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Menu = styled(DialogContent)`
   z-index: 1000;
   position: absolute;
-  top: 72px;
+  top: 0;
   right: 0; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: calc(100% - 75px);
-  height: calc(100vh - 72px);
-  
+  height: 100vh;
   padding: 32px; 
-  padding-right: 22px
-  ;
-  
-  /* background-color: ${COLORS.white}; */
-  background-color: red;
+  padding-top: 26px;
+  padding-right: 40px;
+  background-color: ${COLORS.white};
 
-  @media ${QUERIES.tabletAndDown} {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  @media ${QUERIES.phoneAndDown} {
+    padding-right: 24px;
   }
 `;
 

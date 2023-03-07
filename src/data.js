@@ -13,7 +13,7 @@
 const SHOES = [
   {
     slug: 'tech-challenge',
-    name: 'NikeCourt Tech Challenge 20',
+    name: 'Nike Court Tech Challenge 20',
     imageSrc: '/assets/tech-challenge.jpg',
     price: 16500,
     salePrice: null,

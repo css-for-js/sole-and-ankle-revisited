@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { WEIGHTS } from '../../constants';
+import { WEIGHTS, BRAKEPOINTS } from '../../constants';
 
 import Breadcrumbs from '../Breadcrumbs';
 import Select from '../Select';
@@ -51,6 +51,12 @@ const Wrapper = styled.div`
 
 const LeftColumn = styled.div`
   flex-basis: 248px;
+
+  @media (max-width: ${BRAKEPOINTS.tablet}) {
+    position: absolute;
+    left: 32px;
+    margin-top: -20px;
+  }
 `;
 
 const MainColumn = styled.div`

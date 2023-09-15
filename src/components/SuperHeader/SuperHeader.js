@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import { COLORS } from '../../constants';
+import { BRAKEPOINTS } from '../../constants';
 
 import SearchInput from '../SearchInput';
 import UnstyledButton from '../UnstyledButton';
@@ -32,6 +33,16 @@ const Wrapper = styled.div`
   height: 40px;
   padding-left: 32px;
   padding-right: 32px;
+
+  @media (max-width: ${BRAKEPOINTS.phone}) {
+      height: 10px;
+      padding: 0;
+      gap: 0;
+    & > * {
+      display: none;
+      
+    }
+  }
 `;
 
 const MarketingMessage = styled.span`

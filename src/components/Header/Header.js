@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS, WEIGHTS } from '../../constants';
+import { COLORS, WEIGHTS, BRAKEPOINTS } from '../../constants';
 import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
+import Icon from '../Icon';
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = React.useState(false);
@@ -12,7 +13,7 @@ const Header = () => {
   // For our mobile hamburger menu, we'll want to use a button
   // with an onClick handler, something like this:
   //
-  // <button onClick={() => setShowMobileMenu(true)}>
+  // 
 
   return (
     <header>
@@ -30,6 +31,12 @@ const Header = () => {
           <NavLink href="/collections">Collections</NavLink>
         </Nav>
         <Side />
+        
+        <button onClick={() => setShowMobileMenu(true)}>
+          <Icon strokeWidth={2} id={'shopping-bag'} />  
+          <Icon strokeWidth={2} id={'search'} />  
+          <Icon strokeWidth={2} id={'menu'} />  
+        🍔</button>
       </MainHeader>
 
       <MobileMenu
@@ -52,6 +59,10 @@ const Nav = styled.nav`
   display: flex;
   gap: 48px;
   margin: 0px 48px;
+
+  @media (max-width: ${BRAKEPOINTS.phone}) {
+    display: none;
+  }
 `;
 
 const Side = styled.div`
